@@ -1,5 +1,5 @@
 
-import 'package:fugi_furniture_shop/feature/home/home.dart';
+import 'package:fugi_furniture_shop/feature/home/my_home_screen.dart';
 import 'package:go_router/go_router.dart';
 
 enum AppRoute {
@@ -17,7 +17,7 @@ List<RouteBase> routes = [
   GoRoute(
       path: '/',
       name: AppRoute.home.name,
-      builder: (context, state) => const MyHomePage(),
+      builder: (context, state) => const MyHomeScreen(),
       // routes: [
       //   GoRoute(
       //     path: 'visit_new_mitra',
