@@ -134,8 +134,27 @@ class _MyHomePageState extends State<MyHomePage>
                           child: Container(
                             decoration: BoxDecoration(
                               image: DecorationImage(
-                                image: AssetImage(productDatas[index]['asset']!),
+                                image:
+                                    AssetImage(productDatas[index]['asset']!),
                                 fit: BoxFit.fill,
+                              ),
+                            ),
+                            child: Align(
+                              alignment: Alignment.topLeft,
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12)
+                                  ),
+                                  
+                                  padding: EdgeInsets.all(4),
+                                  child: Icon(
+                                    Icons.favorite_outline,
+                                    color: Colors.red.shade400,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
