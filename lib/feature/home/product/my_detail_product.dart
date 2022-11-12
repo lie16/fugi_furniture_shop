@@ -4,6 +4,7 @@ import '../../../common/widget/color_chooser.dart';
 import '../../../common/widget/star_rating_bar.dart';
 import '../../../const/my_style.dart';
 import '../../../theme/color_pallete.dart';
+import '../page/widget/cart_counter.dart';
 
 class MyDetailProduct extends StatefulWidget {
   const MyDetailProduct({super.key});
@@ -139,7 +140,7 @@ class _MyDetailProductState extends State<MyDetailProduct> {
                         'Select Quantity:',
                         style: MyTextStyle().textLightMedium,
                       ),
-                      Text('quantity bar'),
+                      const CartCounter(),
                     ],
                   ),
                   const SizedBox(
