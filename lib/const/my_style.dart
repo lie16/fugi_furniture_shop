@@ -68,13 +68,13 @@ class MyTextStyle {
   );
 
   TextStyle pageHeadingLarge = TextStyle(
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     fontSize: 20,
     fontFamily: _fontChoice,
   );
 
   TextStyle pageHeadingMedium = TextStyle(
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     fontSize: 16,
     fontFamily: _fontChoice,
   );

@@ -7,7 +7,7 @@ class Sizes {
   static final p4 = 4.0.sp;
   static const p8 = 8.0;
   static const p12 = 12.0;
-  static final p16 = 16.0.sp;
+  static final p16 = 16.0;
   static const p20 = 20.0;
   static const p24 = 24.0;
   static const p32 = 32.0;

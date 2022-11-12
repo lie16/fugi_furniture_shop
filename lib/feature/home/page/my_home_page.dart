@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:fugi_furniture_shop/const/app_sizes.dart';
 import 'package:fugi_furniture_shop/const/my_style.dart';
 import 'package:fugi_furniture_shop/feature/home/page/widget/lie_card_item.dart';
 import 'package:fugi_furniture_shop/theme/color_pallete.dart';
@@ -73,8 +74,14 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu, color: Colors.black),
-        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.transparent.withOpacity(0),
+        centerTitle: true,
+        elevation: 0,
+        leading: Icon(
+          Icons.menu,
+          color: Colors.black,
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -84,7 +91,6 @@ class _MyHomePageState extends State<MyHomePage>
             },
           ),
         ],
-        centerTitle: true,
         title: Text(
           'Home',
           style: MyTextStyle().appTitle,
@@ -99,6 +105,7 @@ class _MyHomePageState extends State<MyHomePage>
               'Discover the most modern furniture',
               style: MyTextStyle().pageHeadingLarge,
             ),
+            gapH8,
             TabBar(
               controller: _controller,
               tabs: data,
@@ -108,6 +115,7 @@ class _MyHomePageState extends State<MyHomePage>
                 color: ColorPallete.tabColor,
               ),
             ),
+            gapH16,
             Text(
               'Recommended Furnitures ',
               style: MyTextStyle().pageHeadingMedium,

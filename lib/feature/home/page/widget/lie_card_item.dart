@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fugi_furniture_shop/const/app_sizes.dart';
 
 import '../../../../const/my_style.dart';
 
@@ -51,9 +52,18 @@ class LieCardItem extends StatelessWidget {
                 ),
               ),
             ),
-            Text(
-              productDatas['label']!,
-              style: MyTextStyle().labelMedium,
+            gapH8,
+            Padding(
+              padding: EdgeInsets.only(
+                left: 8,
+              ),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  productDatas['label']!,
+                  style: MyTextStyle().labelMedium,
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -81,7 +91,8 @@ class LieCardItem extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
+            gapH8,
           ],
         ),
       ),
