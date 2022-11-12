@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:fugi_furniture_shop/const/my_style.dart';
+import 'package:fugi_furniture_shop/feature/home/page/widget/lie_card_item.dart';
 import 'package:fugi_furniture_shop/theme/color_pallete.dart';
 
 import '../widget/my_tab_item.dart';
@@ -89,7 +90,6 @@ class _MyHomePageState extends State<MyHomePage>
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -122,102 +122,15 @@ class _MyHomePageState extends State<MyHomePage>
                   crossAxisSpacing: 8,
                 ),
                 itemBuilder: ((context, index) {
-                  return InkWell(
-                    onTap: (() {
+                  return LieCardItem(
+                    onTap: () {
                       log('${productDatas[index]}');
-                    }),
-                    child: Card(
-                      elevation: 4,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          16,
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Expanded(
-                            child: Container(
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage(productDatas[index]['asset']!),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              child: Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(12)
-                                    ),
-                                    
-                                    padding: EdgeInsets.all(4),
-                                    child: Icon(
-                                      Icons.favorite_outline,
-                                      color: Colors.red.shade400,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            productDatas[index]['label']!,
-                            style: MyTextStyle().labelMedium,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 8),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '${productDatas[index]['currency']!}${productDatas[index]['price']!}',
-                                  style: MyTextStyle().labelLarge,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.amber[200],
-                                    ),
-                                    Text(
-                                      productDatas[index]['rating']!,
-                                      style: MyTextStyle().labelMediumRegular,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
+                    },
+                    productDatas: productDatas[index],
                   );
                 }),
-                // children: [
-                //   Card(
-                //     child: Container(
-                //       width: 100.00,
-                //       height: 100.00,
-                //       decoration: const BoxDecoration(
-                //         image: DecorationImage(
-                //           image: AssetImage('assets/images/1.png'),
-                //           fit: BoxFit.fill,
-                //         ),
-                //       ),
-                //     ),
-                //   ),
-                // ],
               ),
             ),
-            // ListView(),
           ],
         ),
       ),
