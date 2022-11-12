@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:fugi_furniture_shop/const/my_style.dart';
 import 'package:fugi_furniture_shop/feature/home/page/widget/lie_card_item.dart';
 import 'package:fugi_furniture_shop/theme/color_pallete.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../routing/app_router.dart';
 import '../widget/my_tab_item.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -71,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.menu, color: Colors.black),
         backgroundColor: Colors.white,
         actions: [
           IconButton(
@@ -125,6 +128,9 @@ class _MyHomePageState extends State<MyHomePage>
                   return LieCardItem(
                     onTap: () {
                       log('${productDatas[index]}');
+                      context.goNamed(
+                        AppRoute.detailProduct.name,
+                      );
                     },
                     productDatas: productDatas[index],
                   );

@@ -1,5 +1,6 @@
 
 import 'package:fugi_furniture_shop/feature/home/my_home_screen.dart';
+import 'package:fugi_furniture_shop/feature/home/product/my_detail_product.dart';
 import 'package:go_router/go_router.dart';
 
 enum AppRoute {
@@ -18,15 +19,15 @@ List<RouteBase> routes = [
       path: '/',
       name: AppRoute.home.name,
       builder: (context, state) => const MyHomeScreen(),
-      // routes: [
-      //   GoRoute(
-      //     path: 'visit_new_mitra',
-      //     name: AppRoute.home.name,
-      //     pageBuilder: (context, state) => NoTransitionPage<void>(
-      //       key: state.pageKey,
-      //       child: const MyHomePage(),
-      //     ),
-      //   ),
-      // ],
+      routes: [
+        GoRoute(
+          path: 'detail_product',
+          name: AppRoute.detailProduct.name,
+          pageBuilder: (context, state) => NoTransitionPage<void>(
+            key: state.pageKey,
+            child: const MyDetailProduct(),
+          ),
+        ),
+      ],
     ),
 ];
