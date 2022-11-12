@@ -1,71 +1,58 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../../../theme/color_pallete.dart';
+import 'package:fugi_furniture_shop/const/my_style.dart';
+import 'package:fugi_furniture_shop/theme/color_pallete.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
-
-  
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  static List<String> data = [
-    'All',
-    'Living Room',
-    'Bedroom',
-    'Dining Room',
-    'Kitchen',
-  ];
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
+  late TabController _controller;
+  late List<Widget> data;
 
-  static Map<int, Widget> tabData = <int, Widget>{
-    0: Text(
-      'All',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 12,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+  @override
+  void initState() {
+    super.initState();
+    data = [
+      Center(
+        child: Text(
+          'All',
+          style: MyTextStyle().label,
+        ),
       ),
-    ),
-    1: Text(
-      'Living Room',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 12,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+      Center(
+        child: Text(
+          'Living Room',
+          style: MyTextStyle().label,
+        ),
       ),
-    ),
-    2: Text(
-      'Bedroom',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 12,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+      Center(
+        child: Text(
+          'Bedroom',
+          // overflow: TextOverflow.visible,
+          style: MyTextStyle().label,
+        ),
       ),
-    ),
-    3: Text(
-      'Dining Room',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 12,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+      Center(
+        child: Text(
+          'Dining Room',
+          style: MyTextStyle().label,
+        ),
       ),
-    ),
-    4: Text(
-      'Kitchen',
-      style: TextStyle(
-        color: Colors.black,
-        fontSize: 12,
-        fontFamily: GoogleFonts.poppins().fontFamily,
+      Center(
+        child: Text(
+          'Kitchen',
+          style: MyTextStyle().label,
+        ),
       ),
-    ),
-  };
+    ];
+    _controller = TabController(length: data.length, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,10 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         title: Text(
           'Home',
-          style: TextStyle(
-            color: Colors.black,
-            fontFamily: GoogleFonts.poppins().fontFamily,
-          ),
+          style: MyTextStyle().appTitle,
         ),
       ),
       body: Column(
@@ -95,34 +79,22 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Text(
             'Discover the most modern furniture',
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 20,
-              fontFamily: GoogleFonts.poppins().fontFamily,
+            style: MyTextStyle().pageHeadingLarge,
+          ),
+          TabBar(
+            controller: _controller,
+            tabs: data,
+            isScrollable: true,
+            indicator: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              color: ColorPallete.tabColor,
             ),
           ),
-          Container(
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-            child: TabBar(
-              // controller: _controller,
-              tabs: [
-                Tab(
-                  icon: const Icon(Icons.home),
-                  text: 'Address',
-                ),
-                Tab(
-                  icon: const Icon(Icons.my_location),
-                  text: 'Location',
-                ),
-              ],
-            ),
+          Text(
+            'Recommended Furnitures ',
+            style: MyTextStyle().pageHeadingMedium,
           ),
-          // CupertinoSegmentedControl(
-          //   borderColor: Colors.white,
-          //   pressedColor: ColorPallete.fugiShop.shade200,
-          //   children: tabData,
-          //   onValueChanged: ((value) {}),
-          // ),
+          // ListView(),
         ],
       ),
     );

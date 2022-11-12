@@ -14,4 +14,6 @@ class ColorPallete{
     900: Color(0xFF0D0F13),
   });
   static const int _fugiShopPrimaryValue = 0xFF242A32;
+
+  static const Color tabColor = Color(0xFF9A9390);
 }
