@@ -64,19 +64,20 @@ class _MyDetailProductState extends State<MyDetailProduct> {
               ),
             ),
           ),
-          Container(
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              ),
-            ),
+          Semantics(
+            container: true,
+            // decoration: const BoxDecoration(
+            //   borderRadius: BorderRadius.only(
+            //     topLeft: Radius.circular(20),
+            //     topRight: Radius.circular(20),
+            //   ),
+            // ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Row(
+                    Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('WoodenCoff'),
