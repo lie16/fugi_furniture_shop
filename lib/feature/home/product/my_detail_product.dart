@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fugi_furniture_shop/const/app_sizes.dart';
 
 import '../../../common/widget/color_chooser.dart';
 import '../../../common/widget/star_rating_bar.dart';
@@ -118,9 +119,7 @@ class _MyDetailProductState extends State<MyDetailProduct> {
                       () => this.rating = rating,
                     ),
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  gapH8,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -143,16 +142,12 @@ class _MyDetailProductState extends State<MyDetailProduct> {
                       const CartCounter(),
                     ],
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  gapH8,
                   Text(
                     'Curabitur commodo turpis id placerat mattis. Mauris euismod arcu id orci fringilla sodales. Proin congue eleifend ipsum, eleifend porttitor mi ullamcorper.',
                     style: MyTextStyle().textRegularMedium,
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
+                  gapH8,
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: ColorPallete.tabColor,
@@ -173,32 +168,6 @@ class _MyDetailProductState extends State<MyDetailProduct> {
           )
         ],
       ),
-      // bottomSheet: Container(
-      //   height: 400,
-      //   decoration: BoxDecoration(
-      //     borderRadius: BorderRadius.circular(16),
-      //   ),
-      //       child: Column(
-      //         mainAxisAlignment: MainAxisAlignment.end,
-      //         children: [
-      //           Row(
-      //             mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //             children: [
-      //               Text('Hello World'),
-      //               Text('Price'),
-      //             ],
-      //           ),
-      //           // Text('rating'),
-      //           // Row(
-      //           //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-      //           //   children: [
-      //           //     Text('Choose a color'),
-      //           //     Text('Price'),
-      //           //   ],
-      //           // ),
-      //         ],
-      //       ),
-      //   ),
     );
   }
 }
