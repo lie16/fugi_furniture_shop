@@ -21,6 +21,13 @@ class MyTextStyle {
     fontFamily: _fontChoice,
   );
 
+  TextStyle labelButtonBold = TextStyle(
+    color: ColorPallete.mainFontColor,
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+    fontFamily: _fontChoice,
+  );
+
   TextStyle labelMediumRegular = TextStyle(
     color: ColorPallete.mainFontColor,
     fontSize: 12,
@@ -36,6 +43,13 @@ class MyTextStyle {
   TextStyle textLightMedium = TextStyle(
     color: ColorPallete.productDescFontColor,
     fontWeight: FontWeight.w300,
+    fontSize: 12,
+    fontFamily: _fontChoice,
+  );
+
+  TextStyle textRegularMedium = TextStyle(
+    color: ColorPallete.productDescFontColor,
+    fontWeight: FontWeight.w400,
     fontSize: 12,
     fontFamily: _fontChoice,
   );

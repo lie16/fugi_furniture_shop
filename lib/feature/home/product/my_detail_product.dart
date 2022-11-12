@@ -93,7 +93,7 @@ class _MyDetailProductState extends State<MyDetailProduct> {
             elevation: 12.0,
             // child: Text('asdad'),
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(12.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -124,32 +124,46 @@ class _MyDetailProductState extends State<MyDetailProduct> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Chosse a color:',
+                        'Choose a color:',
                         style: MyTextStyle().textLightMedium,
                       ),
                       ColorChooser(
                         listColor: data,
-                        // listColor: [
-                        //   ColorPallete.productColorOne,
-                        //   ColorPallete.productColorTwo,
-                        //   ColorPallete.productColorThree,
-                        //   ColorPallete.productColorFour,
-                        // ],
                       ),
                     ],
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text('Select Quantity:'),
+                      Text(
+                        'Select Quantity:',
+                        style: MyTextStyle().textLightMedium,
+                      ),
                       Text('quantity bar'),
                     ],
                   ),
+                  const SizedBox(
+                    height: 8,
+                  ),
                   Text(
-                      'Curabitur commodo turpis id placerat mattis. Mauris euismod arcu id orci fringilla sodales. Proin congue eleifend ipsum, eleifend porttitor mi ullamcorper.'),
-                  OutlinedButton(
+                    'Curabitur commodo turpis id placerat mattis. Mauris euismod arcu id orci fringilla sodales. Proin congue eleifend ipsum, eleifend porttitor mi ullamcorper.',
+                    style: MyTextStyle().textRegularMedium,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: ColorPallete.tabColor,
+                      minimumSize: Size.fromHeight(40),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18.0),
+                      ),
+                    ),
                     onPressed: () {},
                     child: Text(
                       'ADD TO CART',
+                      style: MyTextStyle().labelButtonBold,
                     ),
                   ),
                 ],
