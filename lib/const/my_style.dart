@@ -9,12 +9,26 @@ class MyTextStyle {
   TextStyle labelMedium = TextStyle(
     color: Colors.black,
     fontSize: 14,
+    fontWeight: FontWeight.w500,
     fontFamily: _fontChoice,
   );
 
   TextStyle label = TextStyle(
     color: Colors.black,
     fontSize: 12,
+    fontWeight: FontWeight.w500,
+    fontFamily: _fontChoice,
+  );
+
+  TextStyle labelMediumRegular = TextStyle(
+    color: Colors.black,
+    fontSize: 12,
+    fontFamily: _fontChoice,
+  );
+
+  TextStyle labelLarge = TextStyle(
+    color: Colors.black,
+    fontSize: 20,
     fontFamily: _fontChoice,
   );
 
@@ -32,6 +46,7 @@ class MyTextStyle {
 
   TextStyle appTitle = TextStyle(
     color: Colors.black,
+    fontWeight: FontWeight.bold,
     fontFamily: _fontChoice,
   );
 }
