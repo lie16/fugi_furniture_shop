@@ -56,7 +56,7 @@ class _MyDetailProductState extends State<MyDetailProduct> {
         children: [
           Expanded(
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/images/5.png'),
                   fit: BoxFit.fill,
@@ -64,37 +64,79 @@ class _MyDetailProductState extends State<MyDetailProduct> {
               ),
             ),
           ),
-          // Container(
-          //   child: Text('a'),
-          // )
+          Container(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('WoodenCoff'),
+                      Text('\$240'),
+                    ],
+                  ),
+                  Text('Rating'),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Chosse a color:'),
+                      Text('5 colors'),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Text('Select Quantity:'),
+                      Text('quantity bar'),
+                    ],
+                  ),
+                  Text(
+                      'Curabitur commodo turpis id placerat mattis. Mauris euismod arcu id orci fringilla sodales. Proin congue eleifend ipsum, eleifend porttitor mi ullamcorper.'),
+                  OutlinedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'ADD TO CART',
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
-      bottomSheet: Container(
-        height: 400,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-        ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text('Hello World'),
-                    Text('Price'),
-                  ],
-                ),
-                // Text('rating'),
-                // Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //   children: [
-                //     Text('Choose a color'),
-                //     Text('Price'),
-                //   ],
-                // ),
-              ],
-            ),
-        ),
+      // bottomSheet: Container(
+      //   height: 400,
+      //   decoration: BoxDecoration(
+      //     borderRadius: BorderRadius.circular(16),
+      //   ),
+      //       child: Column(
+      //         mainAxisAlignment: MainAxisAlignment.end,
+      //         children: [
+      //           Row(
+      //             mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //             children: [
+      //               Text('Hello World'),
+      //               Text('Price'),
+      //             ],
+      //           ),
+      //           // Text('rating'),
+      //           // Row(
+      //           //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //           //   children: [
+      //           //     Text('Choose a color'),
+      //           //     Text('Price'),
+      //           //   ],
+      //           // ),
+      //         ],
+      //       ),
+      //   ),
     );
   }
 }
