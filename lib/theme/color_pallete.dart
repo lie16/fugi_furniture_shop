@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ColorPallete{
-  static const MaterialColor fugiShop = MaterialColor(_fugiShopPrimaryValue, <int, Color>{
+class ColorPallete {
+  static const MaterialColor fugiShop =
+      MaterialColor(_fugiShopPrimaryValue, <int, Color>{
     50: Color(0xFFE5E5E6),
     100: Color(0xFFBDBFC2),
     200: Color(0xFFBBBBBB),
@@ -16,4 +17,14 @@ class ColorPallete{
   static const int _fugiShopPrimaryValue = 0xFF242A32;
 
   static const Color tabColor = Color(0xFF9A9390);
+  static const Color ratingColor = Color(0xFFEEA427);
+
+  static const Color mainFontColor = Color(0xFF4A4543);
+  static const Color priceFontColor = Color(0xFF9A9390);
+  static const Color productDescFontColor = Color(0xFF7A8D9C);
+
+  static const Color productColorOne = Color(0xFF9A9390);
+  static const Color productColorTwo = Color(0xFFEEA427);
+  static const Color productColorThree = Color(0xFFE3E3E3);
+  static const Color productColorFour = Color(0xFF80450A);
 }
